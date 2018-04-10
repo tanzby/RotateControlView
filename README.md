@@ -28,13 +28,7 @@ dependencies {
 }
 ```
 
-
-**Step 3.** Use it in your activity
-
-In your style xml file
-
-
-In your java class
+**Step 3.** In your style xml file
 
 ```xml
 
@@ -93,7 +87,9 @@ In your java class
       app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 </android.support.constraint.ConstraintLayout>
+```
 
+**Step 3.** In your Java class
 ```java
 
 public class MainActivity extends AppCompatActivity {
