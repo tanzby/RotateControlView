@@ -19,11 +19,8 @@ public class RotateControlView extends View {
 
     //region 构造器
     private View contentView;
-    private Paint mPaint = new Paint();;
-    private Context mContext;
+    private Paint mPaint = new Paint();
     private OnRotateListener mListener;
-    private float mAngle = 0;
-    private Path path = new Path();
 
     public RotateControlView(Context context) {
         super(context);
@@ -31,7 +28,6 @@ public class RotateControlView extends View {
 
     public RotateControlView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        mContext = context;
         angle = 0;
 
         mPaint.setTextSize(32);
@@ -71,7 +67,6 @@ public class RotateControlView extends View {
 
     //region 渲染与事件
     private Integer mLastX;
-    private Integer mLastY;
     private float angle;
 
     @Override
@@ -94,7 +89,6 @@ public class RotateControlView extends View {
             }
         }
         mLastX = x;
-        mLastY = y;
         return super.onTouchEvent(event);
     }
 
