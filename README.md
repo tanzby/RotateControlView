@@ -26,6 +26,6 @@ allprojects {
 
 ```
 dependencies {
-  implementation 'com.github.tanzby:RotateControlView:-SNAPSHOT'
+  implementation 'com.github.tanzby:RotateControlView:5720ceb4cb'
 }
 ```
