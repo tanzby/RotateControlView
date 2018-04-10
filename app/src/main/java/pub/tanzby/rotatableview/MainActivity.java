@@ -1,11 +1,11 @@
 package pub.tanzby.rotatableview;
-import pub.tanzby.rotatecontrolview.RotateControlView;
 
-import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import pub.tanzby.rotatecontrolview.RotateControlView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,14 +21,21 @@ public class MainActivity extends AppCompatActivity {
         img = findViewById(R.id.imageView);
         tv = findViewById(R.id.textView);
         rv = findViewById(R.id.rv);
-        rv.addContentView(img);
-        rv.setOnRatateListener(new RotateControlView.OnRotateListener() {
-            @SuppressLint("DefaultLocale")
+
+        rv.addTargetView(img);
+
+        rv.setOnRotateOperatorListener(new RotateControlView.OnRotateOperatorListener() {
             @Override
             public void OnRotate(float angle) {
-                tv.setText(String.format("rotate angle: %f",angle));
+                tv.setText("angle: " + angle);
+            }
+
+            @Override
+            public void OnClickRotate(float angle) {
+                tv.setText("angle: " + angle);
             }
         });
+
 
     }
 }
