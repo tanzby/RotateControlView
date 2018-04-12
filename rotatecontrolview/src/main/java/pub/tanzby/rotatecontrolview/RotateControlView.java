@@ -58,7 +58,9 @@ public class RotateControlView extends RelativeLayout {
             @Override
             public void OnRotate(float angle) {
                 last_angle = angle;
-                mOnRotateOperatorListener.OnRotate(angle);
+                if (null != mOnRotateOperatorListener) {
+                    mOnRotateOperatorListener.OnRotate(angle);
+                }
             }
         });
 
@@ -67,7 +69,9 @@ public class RotateControlView extends RelativeLayout {
             public void onClick(View v) {
                 extra_angle = (90 + extra_angle) % 360;
                 rccv.setTargetViewRotate(last_angle + extra_angle);
-                mOnRotateOperatorListener.OnClickRotate(last_angle + extra_angle);
+                if (null != mOnRotateOperatorListener) {
+                    mOnRotateOperatorListener.OnClickRotate(last_angle + extra_angle);
+                }
             }
         });
     }

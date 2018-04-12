@@ -21,20 +21,20 @@ public class MainActivity extends AppCompatActivity {
         img = findViewById(R.id.imageView);
         tv = findViewById(R.id.textView);
         rv = findViewById(R.id.rv);
-
-        rv.addTargetView(img);
-
-        rv.setOnRotateOperatorListener(new RotateControlView.OnRotateOperatorListener() {
-            @Override
-            public void OnRotate(float angle) {
-                tv.setText("angle: " + angle);
-            }
-
-            @Override
-            public void OnClickRotate(float angle) {
-                tv.setText("angle: " + angle);
-            }
-        });
+//
+//        rv.addTargetView(img);
+//
+//        rv.setOnRotateOperatorListener(new RotateControlView.OnRotateOperatorListener() {
+//            @Override
+//            public void OnRotate(float angle) {
+//                tv.setText("angle: " + angle);
+//            }
+//
+//            @Override
+//            public void OnClickRotate(float angle) {
+//                tv.setText("angle: " + angle);
+//            }
+//        });
 
 
     }
