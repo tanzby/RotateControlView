@@ -132,6 +132,7 @@ public class RotateControlView extends RelativeLayout {
         //endregion
 
         public void setTargetViewRotate(float angle) {
+            if (null != contentView) return;
             boolean is_circle = false;
             if (angle < last_angle - 90) {
                 angle = 360 + angle;
