@@ -24,7 +24,7 @@ allprojects {
 
 ```
 dependencies {
-  implementation 'com.github.tanzby:RotateControlView:c687273743'
+  compile 'com.github.tanzby:RotateControlView:v0.99'
 }
 ```
 
